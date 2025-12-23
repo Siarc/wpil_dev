@@ -23,7 +23,7 @@ class TrackingController extends Controller
     public function partner(): View
     {
         return view('tracking.partner', [
-            'partnerUrl' => 'https://gol.gpd.lk/'
+            'partnerUrl' => 'https://gol.gpd.lk/login.aspx?stid=aitkens'
         ]);
     }
 }
