@@ -17,8 +17,8 @@
                             World Pac International Ltd. provides end-to-end supply chain solutions, freight forwarding, and expert logistics management for businesses worldwide.
                         </p>
                         <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start gap-4">
-                            <x-ui.button variant="primary" href="{{ route('tracking.primary') }}">
-                                Track Now
+                            <x-ui.button variant="primary" href="{{ route('contact') }}">
+                                Contact US
                             </x-ui.button>
                             <x-ui.button variant="outline" href="{{ route('contact') }}">
                                 Our Services
