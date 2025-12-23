@@ -29,6 +29,7 @@
                 <!-- Desktop Nav -->
                 <div class="hidden md:ml-6 md:flex md:space-x-8 items-center">
                     <a href="{{ route('home') }}" class="text-brand-gray hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">Home</a>
+                    <a href="{{ route('about') }}" class="text-brand-gray hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">About</a>
                     <a href="{{ route('tracking.primary') }}" class="text-brand-gray hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">Tracking</a>
                     <x-ui.button variant="primary" href="{{ route('contact') }}">Contact US</x-ui.button>
                 </div>
@@ -59,6 +60,7 @@
              class="md:hidden" id="mobile-menu" x-cloak>
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-brand-surface shadow-lg">
                 <a href="{{ route('home') }}" class="block px-3 py-2 rounded-md text-base font-medium text-brand-gray hover:text-brand-primary hover:bg-gray-50">Home</a>
+                <a href="{{ route('about') }}" class="block px-3 py-2 rounded-md text-base font-medium text-brand-gray hover:text-brand-primary hover:bg-gray-50">About</a>
                 <a href="{{ route('tracking.primary') }}" class="block px-3 py-2 rounded-md text-base font-medium text-brand-gray hover:text-brand-primary hover:bg-gray-50">Tracking</a>
                 <div class="px-3 py-4">
                     <x-ui.button variant="primary" class="w-full justify-center" href="{{ route('contact') }}">Contact US</x-ui.button>

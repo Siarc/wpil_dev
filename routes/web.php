@@ -5,6 +5,7 @@ use App\Http\Controllers\TrackingController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::view('/about', 'about')->name('about');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
 Route::prefix('tracking')->name('tracking.')->group(function () {
