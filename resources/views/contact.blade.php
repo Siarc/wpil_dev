@@ -1,12 +1,136 @@
 <x-layout>
-    <div class="py-24 bg-brand-light min-h-screen">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center mb-16">
-                <h1 class="text-4xl font-extrabold text-brand-primary font-montserrat">Contact Us</h1>
-                <p class="mt-4 text-xl text-brand-gray">Connect with our global logistics network for dedicated support.</p>
+    <div class="relative min-h-screen bg-brand-light">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-x-0 top-0 h-[85vh] overflow-hidden">
+            <img src="{{ asset('images/contact-bg.jpg') }}" 
+                 class="w-full h-full object-cover" 
+                 alt="Logistics Background">
+            <div class="absolute inset-0 bg-gradient-to-b from-brand-primary/95 via-brand-primary/75 to-brand-light"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            
+            <!-- Request a Call Section -->
+            <div class="mb-24">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                    <!-- Text Content -->
+                    <div class="lg:col-span-5 pt-8">
+                        <h1 class="text-4xl md:text-5xl font-extrabold text-white font-montserrat leading-tight mb-6 drop-shadow-lg">
+                            Request a Call
+                        </h1>
+                        <h2 class="text-3xl md:text-4xl font-bold text-white/95 font-montserrat mb-6 drop-shadow-md">
+                            Let’s talk 👋
+                        </h2>
+                        <p class="text-xl text-blue-50 leading-relaxed mb-8 drop-shadow-sm font-medium">
+                            Share a few details and we’ll connect you with the right person to solve your logistics challenges.
+                        </p>
+                        
+                        <div class="hidden lg:block">
+                            <div class="inline-flex items-center space-x-2 text-white font-bold uppercase tracking-widest text-sm mb-4">
+                                <span class="h-1 w-8 bg-brand-secondary rounded-full"></span>
+                                <span>Why Talk to Us?</span>
+                            </div>
+                            <ul class="space-y-4">
+                                @foreach(['Tailored Supply Chain Solutions', 'Global Logistics Expertise', 'Real-time Tracking & Visibility'] as $benefit)
+                                <li class="flex items-center text-blue-50 font-medium">
+                                    <svg class="h-5 w-5 text-green-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    {{ $benefit }}
+                                </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Form Card -->
+                    <div class="lg:col-span-7">
+                        <div class="bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl p-6 md:p-8 border border-white/20">
+                            <form action="#" method="POST" class="space-y-4">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <x-ui.label for="first_name">First Name</x-ui.label>
+                                        <x-ui.input id="first_name" name="first_name" placeholder="Enter first name" required />
+                                    </div>
+                                    <div>
+                                        <x-ui.label for="last_name">Last Name</x-ui.label>
+                                        <x-ui.input id="last_name" name="last_name" placeholder="Enter last name" required />
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <x-ui.label for="job_title">Job Title</x-ui.label>
+                                        <x-ui.input id="job_title" name="job_title" placeholder="Your role" required />
+                                    </div>
+                                    <div>
+                                        <x-ui.label for="email">Work Email</x-ui.label>
+                                        <x-ui.input id="email" type="email" name="email" placeholder="example@company.com" required />
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <x-ui.label for="phone">Phone Number</x-ui.label>
+                                        <x-ui.input id="phone" type="tel" name="phone" placeholder="+880..." required />
+                                    </div>
+                                    <div>
+                                        <x-ui.label for="country">Country / Region</x-ui.label>
+                                        <x-ui.select id="country" name="country" required>
+                                            <option value="Bangladesh" selected>Bangladesh</option>
+                                            <option value="Global">Other (Global)</option>
+                                        </x-ui.select>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <x-ui.label for="company_name">Company Name</x-ui.label>
+                                        <x-ui.input id="company_name" name="company_name" placeholder="Your company" required />
+                                    </div>
+                                    <div>
+                                        <x-ui.label for="team_size">Team Size</x-ui.label>
+                                        <x-ui.select id="team_size" name="team_size" required>
+                                            <option value="">Select size</option>
+                                            <option value="1-10">1-10 Employees</option>
+                                            <option value="11-50">11-50 Employees</option>
+                                            <option value="51-200">51-200 Employees</option>
+                                            <option value="201+">201+ Employees</option>
+                                        </x-ui.select>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <x-ui.label for="interest">Product Interest</x-ui.label>
+                                    <x-ui.select id="interest" name="interest" required>
+                                        <option value="">Choose what you’d like to explore</option>
+                                        <option value="freight">Freight Forwarding</option>
+                                        <option value="warehousing">Warehousing & Distribution</option>
+                                        <option value="customs">Customs Brokerage</option>
+                                        <option value="ecommerce">E-commerce Logistics</option>
+                                    </x-ui.select>
+                                </div>
+
+                                <div>
+                                    <x-ui.label for="message">Anything You’d Like to Add?</x-ui.label>
+                                    <x-ui.textarea id="message" name="message" placeholder="Questions, goals, or challenges—drop them here." />
+                                </div>
+
+                                <div class="flex justify-end pt-2">
+                                    <x-ui.button variant="primary" type="submit" class="px-8 py-3 text-base !rounded-lg shadow-lg hover:shadow-xl transition-all">
+                                        Request Callback
+                                    </x-ui.button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <hr class="border-gray-100 mb-24">
+
+            <!-- Offices Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
                 <!-- Head Office -->
                 <div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100 flex flex-col">
                     <div class="mb-6">
@@ -112,8 +236,8 @@
                     </x-ui.button>
                 </div>
                 <!-- Abstract Background Shapes -->
-                <div class="absolute top-0 right-0 -transe-y-1/2 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
-                <div class="absolute bottom-0 left-0 transe-y-1/2 w-96 h-96 bg-brand-secondary/10 rounded-full blur-3xl"></div>
+                <div class="absolute top-0 right-0 -translate-y-1/2 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-0 left-0 trnaslate-y-1/2 w-96 h-96 bg-brand-secondary/10 rounded-full blur-3xl"></div>
             </div>
         </div>
     </div>
