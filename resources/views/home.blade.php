@@ -56,63 +56,37 @@
     <div class="py-24 bg-brand-light" id="services">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-base text-brand-secondary font-semibold tracking-wide uppercase">Our Solutions</h2>
+                <h2 class="text-base text-brand-secondary font-semibold tracking-wide uppercase">Our Capabilities</h2>
                 <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-brand-primary sm:text-4xl font-montserrat">
-                    Comprehensive Logistics Services
+                    Smart Logistics Solutions
                 </p>
                 <p class="mt-4 max-w-2xl text-xl text-brand-gray mx-auto">
-                    From express courier to complex supply chain management.
+                    We offer a wide range of services to handle your global supply chain needs.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- International Courier -->
-                <div class="bg-white rounded-2xl shadow-sm overflow-hidden group hover:shadow-lg transition-all duration-300">
-                    <div class="h-48 overflow-hidden">
-                        <img src="{{ asset('images/service-freight.jpg') }}" alt="International Courier" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-brand-primary font-montserrat mb-2">International Courier</h3>
-                        <p class="text-sm text-brand-gray">End-to-end international courier delivery with global tracking and priority handling.</p>
-                    </div>
-                </div>
-
-                <!-- Fulfilment -->
-                <div class="bg-white rounded-2xl shadow-sm overflow-hidden group hover:shadow-lg transition-all duration-300">
-                    <div class="h-48 bg-brand-surface flex items-center justify-center">
-                        <svg class="w-16 h-16 text-brand-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                @foreach([
+                    ['title' => 'Express Courier', 'icon' => 'M13 10V3L4 14h7v7l9-11h-7z', 'desc' => 'Fast international delivery with global reach.'],
+                    ['title' => 'Customs Expertise', 'icon' => 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z', 'desc' => 'Specialized documentation and fast clearance.'],
+                    ['title' => 'Global Logistics', 'icon' => 'M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 002 2h2.945M8 3.935A9 9 0 1114.538 21.065', 'desc' => 'End-to-end import and export solutions.'],
+                ] as $item)
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-blue-50 text-brand-primary rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="{{ $item['icon'] }}" />
                         </svg>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-brand-primary font-montserrat mb-2">Fulfilment</h3>
-                        <p class="text-sm text-brand-gray">Cross-border e-commerce fulfillment, last-mile delivery, and customs clearance support.</p>
-                    </div>
+                    <h3 class="text-xl font-bold text-brand-primary mb-3">{{ $item['title'] }}</h3>
+                    <p class="text-brand-gray text-sm mb-6">{{ $item['desc'] }}</p>
                 </div>
+                @endforeach
+            </div>
 
-                <!-- Digital Services -->
-                <div class="bg-white rounded-2xl shadow-sm overflow-hidden group hover:shadow-lg transition-all duration-300">
-                    <div class="h-48 overflow-hidden">
-                        <img src="{{ asset('images/service-digital.jpg') }}" alt="Digital Services" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-brand-primary font-montserrat mb-2">Digital Services</h3>
-                        <p class="text-sm text-brand-gray">Seamless API/ERP integration for automated tracking and order synchronization.</p>
-                    </div>
-                </div>
-
-                <!-- Corporate & B2B -->
-                <div class="bg-white rounded-2xl shadow-sm overflow-hidden group hover:shadow-lg transition-all duration-300">
-                    <div class="h-48 bg-brand-primary flex items-center justify-center">
-                        <svg class="w-16 h-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                        </svg>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-brand-primary font-montserrat mb-2">Corporate & B2B</h3>
-                        <p class="text-sm text-brand-gray">Enterprise-grade logistics solutions with scalable, contract-based commercial pricing.</p>
-                    </div>
-                </div>
+            <div class="mt-16 text-center">
+                <x-ui.button variant="primary" href="{{ route('services') }}">
+                    View All Services & Process
+                </x-ui.button>
             </div>
         </div>
     </div>
