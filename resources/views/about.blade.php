@@ -106,25 +106,87 @@
         </div>
     </div>
 
-    <!-- Infrastructure -->
+    <!-- Infrastructure & Network -->
     <div class="py-24 bg-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-bold text-brand-primary font-montserrat">Infrastructure & Network</h2>
-                <p class="mt-4 text-xl text-brand-gray max-w-2xl mx-auto">Robust nationwide coverage with dedicated operational hubs.</p>
+                <p class="mt-4 text-xl text-brand-gray max-w-2xl mx-auto">Strategically positioned assets to ensure seamless cargo movement across borders and within the nation.</p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                @foreach(['Dhaka Airport Warehouse', 'Motijheel Hub', 'Uttara Hub', 'Chattogram Operations'] as $hub)
-                <div class="group bg-brand-light p-6 rounded-xl border border-gray-100 hover:border-brand-primary/20 transition-all hover:-translate-y-1">
-                    <div class="w-10 h-10 bg-white rounded-lg shadow-sm flex items-center justify-center mb-4 text-brand-secondary">
-                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <!-- Air Warehousing -->
+                <div class="bg-brand-light p-8 rounded-2xl border border-gray-100 flex gap-6 items-start">
+                    <div class="flex-shrink-0 w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-brand-secondary">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                         </svg>
                     </div>
-                    <h3 class="font-bold text-brand-primary">{{ $hub }}</h3>
+                    <div>
+                        <h3 class="text-xl font-bold text-brand-primary mb-3">Strategic Air Warehousing</h3>
+                        <p class="text-brand-gray mb-4">Dedicated warehouse facilities at core aviation gateways for priority handling.</p>
+                        <ul class="grid grid-cols-1 gap-2">
+                            <li class="flex items-center text-sm font-semibold text-brand-primary">
+                                <span class="w-1.5 h-1.5 bg-brand-secondary rounded-full mr-2"></span> Dhaka Airport (DAC)
+                            </li>
+                            <li class="flex items-center text-sm font-semibold text-brand-primary">
+                                <span class="w-1.5 h-1.5 bg-brand-secondary rounded-full mr-2"></span> Chattogram Airport (CGP)
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                @endforeach
+
+                <!-- Operational Hubs -->
+                <div class="bg-brand-light p-8 rounded-2xl border border-gray-100 flex gap-6 items-start">
+                    <div class="flex-shrink-0 w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-brand-secondary">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-brand-primary mb-3">Regional Operational Hubs</h3>
+                        <p class="text-brand-gray mb-4">A robust network ensuring efficient last-mile distribution and cargo consolidation.</p>
+                        <div class="flex flex-wrap gap-x-4 gap-y-2">
+                            <span class="px-3 py-1 bg-white rounded-full text-xs font-bold text-brand-primary border border-gray-100">Motijheel</span>
+                            <span class="px-3 py-1 bg-white rounded-full text-xs font-bold text-brand-primary border border-gray-100">Uttara</span>
+                            <span class="px-3 py-1 bg-white rounded-full text-xs font-bold text-brand-primary border border-gray-100">Cumilla</span>
+                            <span class="px-3 py-1 bg-white rounded-full text-xs font-bold text-brand-primary border border-gray-100">Chattogram</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Expertise -->
+                <div class="bg-brand-primary text-white p-8 rounded-2xl shadow-lg flex gap-6 items-start">
+                    <div class="flex-shrink-0 w-12 h-12 bg-brand-secondary rounded-xl flex items-center justify-center text-white">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 font-montserrat">Operational Excellence</h3>
+                        <p class="text-blue-100 text-sm leading-relaxed">
+                            Our in-house customs brokerage team simplifies complex regulatory landscapes, while our 
+                            nationwide coverage ensures efficient cargo handling and distribution across Bangladesh.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Global Partnerships -->
+                <div class="bg-brand-primary text-white p-8 rounded-2xl shadow-lg flex gap-6 items-start">
+                    <div class="flex-shrink-0 w-12 h-12 bg-brand-secondary rounded-xl flex items-center justify-center text-white">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 002 2h2.945M8 3.935A9 9 0 1114.538 21.065" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 font-montserrat">Global Connectivity</h3>
+                        <p class="text-blue-100 text-sm leading-relaxed">
+                            Extending our reach through strategic partnerships in UAE and across major international 
+                            trade routes, connecting your business to the global market.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
