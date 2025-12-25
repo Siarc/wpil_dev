@@ -29,10 +29,7 @@
             </div>
         </div>
         <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-            <div class="h-56 w-full sm:h-72 md:h-96 lg:w-full lg:h-full bg-gradient-to-br from-brand-primary to-brand-secondary opacity-20 flex items-center justify-center">
-                 <!-- In a real app, use generate_image to get a nice logistics image -->
-                 <div class="text-brand-primary font-montserrat font-bold text-4xl">WPIL LOGISTICS</div>
-            </div>
+            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="{{ asset('images/home-hero.png') }}" alt="World Pac Logistics Global Delivery">
         </div>
     </div>
 
@@ -42,7 +39,7 @@
             <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2">
                 <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl text-center border border-white/20">
                     <div class="text-5xl font-extrabold text-white mb-2">{{ $stats['shipments'] }}</div>
-                    <div class="text-gray-200 text-lg uppercase tracking-wider font-montserrat">Annual Shipments</div>
+                    <div class="text-gray-200 text-lg uppercase tracking-wider font-montserrat">Daily Shipments</div>
                 </div>
                 <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl text-center border border-white/20">
                     <div class="text-5xl font-extrabold text-white mb-2">{{ $stats['accuracy'] }}</div>

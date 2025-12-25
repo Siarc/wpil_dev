@@ -1,7 +1,7 @@
 <x-layout>
     <!-- About Hero -->
     <div class="relative h-[60vh] overflow-hidden">
-        <img src="{{ asset('images/about-hero.jpg') }}" class="w-full h-full object-cover" alt="WPIL Corporate Team">
+        <img src="{{ asset('images/about-hero.png') }}" class="w-full h-full object-cover" alt="WPIL Corporate Team">
         <div class="absolute inset-0 bg-brand-primary/80"></div>
         <div class="absolute inset-0 flex items-center justify-center">
             <div class="max-w-4xl mx-auto px-4 text-center">
