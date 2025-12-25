@@ -1,4 +1,39 @@
-<x-layout>
+<x-layout 
+    title="World Pac International Ltd. - Leading Logistics & Freight Forwarding in Bangladesh"
+    description="WPIL provides international courier, customs clearance, warehousing, and freight forwarding services across 220+ countries. 1,700+ daily shipments with 97.6% tracking accuracy."
+    ogImage="/images/home-hero.png">
+    
+    {{-- FAQ Schema for Featured Snippets --}}
+    <script type="application/ld+json">
+    {
+      "@@context": "https://schema.org",
+      "@@type": "FAQPage",
+      "mainEntity": [{
+        "@@type": "Question",
+        "name": "What logistics services does World Pac International provide?",
+        "acceptedAnswer": {
+          "@@type": "Answer",
+          "text": "World Pac International Ltd. provides international courier services, freight forwarding (air and sea), customs clearance, warehousing, door-to-door delivery, and e-commerce logistics solutions across 220+ countries."
+        }
+      }, {
+        "@@type": "Question",
+        "name": "How many shipments does WPIL handle daily?",
+        "acceptedAnswer": {
+          "@@type": "Answer",
+          "text": "WPIL handles over 1,700 shipments daily with a tracking accuracy of 97.6%, ensuring reliable and efficient delivery worldwide."
+        }
+      }, {
+        "@@type": "Question",
+        "name": "Where is World Pac International located?",
+        "acceptedAnswer": {
+          "@@type": "Answer",
+          "text": "World Pac International Ltd. is headquartered in Dhaka, Bangladesh, with warehouses at Dhaka and Chattogram Airports, and operational hubs in Motijheel, Uttara, Cumilla, and Chattogram."
+        }
+      }]
+    }
+    </script>
+
+
     <!-- Hero Section -->
     <div class="relative overflow-hidden bg-white">
         <div class="max-w-7xl mx-auto">
@@ -29,7 +64,7 @@
             </div>
         </div>
         <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="{{ asset('images/home-hero.png') }}" alt="World Pac Logistics Global Delivery">
+            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="{{ asset('images/home-hero.png') }}" alt="International freight forwarding and logistics services in Bangladesh - World Pac cargo aircraft and delivery fleet" loading="eager">
         </div>
     </div>
 

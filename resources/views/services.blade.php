@@ -1,4 +1,65 @@
-<x-layout>
+<x-layout 
+    title="Logistics Services - International Courier, Freight Forwarding & Customs | WPIL"
+    description="World Pac International offers express courier, import/export logistics, customs clearance, warehousing, e-commerce fulfillment, and door-to-door delivery services across 220+ countries."
+    ogImage="/images/service-logistics.jpg">
+    
+    {{-- Service Schema for Rich Results --}}
+    <script type="application/ld+json">
+    {
+      "@@context": "https://schema.org",
+      "@@type": "Service",
+      "serviceType": "Logistics and Freight Forwarding",
+      "provider": {
+        "@@type": "Organization",
+        "name": "World Pac International Ltd.",
+        "url": "{{ url('/') }}"
+      },
+      "areaServed": {
+        "@@type": "Country",
+        "name": "Bangladesh"
+      },
+      "hasOfferCatalog": {
+        "@@type": "OfferCatalog",
+        "name": "Logistics Services",
+        "itemListElement": [
+          {
+            "@@type": "Offer",
+            "itemOffered": {
+              "@@type": "Service",
+              "name": "International Courier & Express",
+              "description": "Premium delivery solutions for documents and parcels worldwide with real-time tracking and priority handling."
+            }
+          },
+          {
+            "@@type": "Offer",
+            "itemOffered": {
+              "@@type": "Service",
+              "name": "Import & Export Logistics",
+              "description": "Seamless global trade management covering air and sea freight with optimized transit times."
+            }
+          },
+          {
+            "@@type": "Offer",
+            "itemOffered": {
+              "@@type": "Service",
+              "name": "Customs Clearance",
+              "description": "Expertise in complex regulatory requirements, ensuring smooth documentation and fast clearance."
+            }
+          },
+          {
+            "@@type": "Offer",
+            "itemOffered": {
+              "@@type": "Service",
+              "name": "Warehousing & Cargo Handling",
+              "description": "Secure storage, inventory management, and professional cargo handling at strategic hubs."
+            }
+          }
+        ]
+      }
+    }
+    </script>
+
+
     <!-- Services Hero -->
     <div class="relative h-[50vh] overflow-hidden">
         <img src="{{ asset('images/service-logistics.jpg') }}" class="w-full h-full object-cover" alt="Services Hero">

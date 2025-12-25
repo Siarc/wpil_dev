@@ -1,11 +1,75 @@
+@props(['title' => null, 'description' => null, 'ogImage' => null, 'ogTitle' => null, 'ogDescription' => null, 'canonical' => null])
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="scroll-smooth">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="World Pac International Ltd. (WPIL) - Leading Logistics and Forwarding Solutions.">
-
-    <title>{{ config('app.name', 'WPIL') }}</title>
+    
+    {{-- Dynamic SEO Meta Tags --}}
+    <title>{{ $title ?? 'World Pac International Ltd. - Global Logistics & Freight Forwarding in Bangladesh' }}</title>
+    <meta name="description" content="{{ $description ?? 'World Pac International Ltd. (WPIL) provides end-to-end logistics solutions, international courier services, customs clearance, and freight forwarding across 220+ countries from Bangladesh.' }}">
+    <meta name="keywords" content="logistics Bangladesh, freight forwarding Dhaka, international courier, customs clearance, warehousing, express delivery, cargo services, import export Bangladesh">
+    <meta name="author" content="World Pac International Ltd.">
+    <link rel="canonical" href="{{ $canonical ?? url()->current() }}">
+    
+    {{-- Open Graph Meta Tags --}}
+    <meta property="og:title" content="{{ $ogTitle ?? $title ?? 'World Pac International Ltd. - Global Logistics Solutions' }}">
+    <meta property="og:description" content="{{ $ogDescription ?? $description ?? 'Leading logistics and freight forwarding company in Bangladesh. 1,700+ daily shipments, 220+ countries served.' }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:image" content="{{ asset($ogImage ?? 'images/home-hero.png') }}">
+    <meta property="og:site_name" content="World Pac International Ltd.">
+    <meta property="og:locale" content="en_US">
+    
+    {{-- Twitter Card Meta Tags --}}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ $ogTitle ?? $title ?? 'World Pac International Ltd.' }}">
+    <meta name="twitter:description" content="{{ $ogDescription ?? $description ?? 'Global logistics and freight forwarding solutions from Bangladesh.' }}">
+    <meta name="twitter:image" content="{{ asset($ogImage ?? 'images/home-hero.png') }}">
+    
+    {{-- Additional Meta Tags --}}
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="theme-color" content="#2E3192">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#2E3192">
+    
+    {{-- Favicons --}}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
+    
+    {{-- Schema.org Structured Data - Organization --}}
+    <script type="application/ld+json">
+    {
+      "@@context": "https://schema.org",
+      "@@type": "Organization",
+      "name": "World Pac International Ltd.",
+      "alternateName": "WPIL",
+      "url": "{{ url('/') }}",
+      "logo": "{{ asset('images/logo.png') }}",
+      "description": "Leading logistics and freight forwarding company in Bangladesh providing international courier, customs clearance, warehousing, and supply chain solutions.",
+      "address": {
+        "@@type": "PostalAddress",
+        "addressCountry": "BD",
+        "addressLocality": "Dhaka",
+        "addressRegion": "Dhaka Division"
+      },
+      "contactPoint": [{
+        "@@type": "ContactPoint",
+        "contactType": "customer service",
+        "areaServed": ["BD", "Global"],
+        "availableLanguage": ["en", "bn"]
+      }],
+      "sameAs": [
+        "{{ url('/') }}"
+      ],
+      "aggregateRating": {
+        "@@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "150"
+      }
+    }
+    </script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

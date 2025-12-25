@@ -1,4 +1,61 @@
-<x-layout>
+<x-layout 
+    title="About WPIL - Leading Logistics Company in Bangladesh Since 2004"
+    description="World Pac International Ltd. (WPIL) is a leading logistics and freight forwarding company in Bangladesh. Established in 2004, handling 1,700+ daily shipments across 220+ countries with warehouses at Dhaka and Chattogram airports."
+    ogImage="/images/about-hero.png">
+    
+    {{-- LocalBusiness Schema for Local SEO --}}
+    <script type="application/ld+json">
+    {
+      "@@context": "https://schema.org",
+      "@@type": "LocalBusiness",
+      "name": "World Pac International Ltd.",
+      "alternateName": "WPIL",
+      "description": "Leading logistics and freight forwarding company in Bangladesh providing international courier, customs clearance, warehousing, and supply chain solutions since 2004.",
+      "url": "{{ url('/') }}",
+      "telephone": "+880-XXX-XXXX",
+      "priceRange": "$$",
+      "address": {
+        "@@type": "PostalAddress",
+        "streetAddress": "Dhaka Airport",
+        "addressLocality": "Dhaka",
+        "addressRegion": "Dhaka Division",
+        "postalCode": "1229",
+        "addressCountry": "BD"
+      },
+      "geo": {
+        "@@type": "GeoCoordinates",
+        "latitude": "23.8103",
+        "longitude": "90.4125"
+      },
+      "openingHoursSpecification": [{
+        "@@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Sunday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }],
+      "sameAs": [
+        "{{ url('/') }}"
+      ],
+      "areaServed": [
+        {
+          "@@type": "Country",
+          "name": "Bangladesh"
+        },
+        {
+          "@@type": "AdministrativeArea",
+          "name": "Global"
+        }
+      ],
+      "hasMap": "https://maps.google.com/?q=Dhaka+Airport+Bangladesh",
+      "foundingDate": "2004",
+      "numberOfEmployees": {
+        "@@type": "QuantitativeValue",
+        "value": "50"
+      }
+    }
+    </script>
+
+
     <!-- About Hero -->
     <div class="relative h-[60vh] overflow-hidden">
         <img src="{{ asset('images/about-hero.png') }}" class="w-full h-full object-cover" alt="WPIL Corporate Team">
