@@ -12,7 +12,7 @@
       "alternateName": "WPIL",
       "description": "Leading logistics and freight forwarding company in Bangladesh providing international courier, customs clearance, warehousing, and supply chain solutions since 2004.",
       "url": "{{ url('/') }}",
-      "telephone": "+880-XXX-XXXX",
+      "telephone": "+8801329727536",
       "priceRange": "$$",
       "address": {
         "@@type": "PostalAddress",
@@ -57,19 +57,19 @@
 
 
     <!-- About Hero -->
-    <div class="relative h-[60vh] overflow-hidden">
+    <div class="relative h-[40vh] min-h-[300px] overflow-hidden">
         <img src="{{ asset('images/about-hero.png') }}" class="w-full h-full object-cover" alt="WPIL Corporate Team">
-        <div class="absolute inset-0 bg-brand-primary/80"></div>
+        <div class="absolute inset-0 bg-brand-primary/75 backdrop-blur-[1px]"></div>
         <div class="absolute inset-0 flex items-center justify-center">
             <div class="max-w-4xl mx-auto px-4 text-center">
                 <h1 class="text-4xl md:text-6xl font-extrabold text-white font-montserrat tracking-tight mb-4">About WPIL</h1>
-                <p class="text-xl text-blue-100 max-w-2xl mx-auto">Decades of operational excellence in international logistics and courier services.</p>
+                <p class="text-xl md:text-2xl text-blue-100 max-w-2xl mx-auto">Decades of operational excellence in international logistics and courier services.</p>
             </div>
         </div>
     </div>
 
     <!-- Executive Summary & History -->
-    <div class="py-24 bg-white">
+    <div class="min-h-[calc(100vh-40vh-80px)] flex items-center bg-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>

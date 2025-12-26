@@ -61,13 +61,13 @@
 
 
     <!-- Services Hero -->
-    <div class="relative h-[50vh] overflow-hidden">
+    <div class="relative h-[40vh] min-h-[300px] overflow-hidden">
         <img src="{{ asset('images/service-logistics.jpg') }}" class="w-full h-full object-cover" alt="Services Hero">
-        <div class="absolute inset-0 bg-brand-primary/70 backdrop-blur-[2px]"></div>
+        <div class="absolute inset-0 bg-brand-primary/75 backdrop-blur-[1px]"></div>
         <div class="absolute inset-0 flex items-center justify-center">
             <div class="max-w-4xl mx-auto px-4 text-center">
                 <h1 class="text-4xl md:text-6xl font-extrabold text-white font-montserrat tracking-tight mb-4">Our Services</h1>
-                <p class="text-xl text-blue-100 max-w-2xl mx-auto">Comprehensive logistics solutions tailored for your business needs.</p>
+                <p class="text-xl md:text-2xl text-blue-100 max-w-2xl mx-auto">Empowering global trade with specialized, efficient logistics and supply chain services.</p>
             </div>
         </div>
     </div>

@@ -1,4 +1,6 @@
-<x-layout>
+<x-layout 
+    title="Contact World Pac International Ltd. - Logistics Experts in Bangladesh"
+    description="Get in touch with WPIL for international courier, freight forwarding, and customs clearance inquiries. Visit our offices in Dhaka, Gazipur, and Chattogram.">
     <div class="relative min-h-screen bg-brand-light">
         <!-- Background Image with Overlay -->
         <div class="absolute inset-x-0 top-0 h-[85vh] overflow-hidden">

@@ -1,4 +1,6 @@
-<x-layout>
+<x-layout 
+    title="Shipment Tracking - Real-time Cargo Visibility | WPIL"
+    description="Track your international shipments and cargo in real-time. Access our primary tracking portal for the latest status updates on your logistics journey.">
     <div class="py-12 bg-brand-light min-h-screen">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">

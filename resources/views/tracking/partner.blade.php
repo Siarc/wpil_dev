@@ -1,4 +1,6 @@
-<x-layout>
+<x-layout 
+    title="Global Partner Tracking - Associate Network Shipments | WPIL"
+    description="Access our global partner network tracking system. Monitor shipments handled via our international associates and strategic logistics partners.">
     <div class="py-12 bg-brand-light min-h-screen flex items-center">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100 flex flex-col md:flex-row">
